@@ -10,9 +10,9 @@
 }
 :root{
     --bg-color: #fff;
-    --snd-bg-color:#d5fdf9;
+    --snd-bg-color:#E4AF76;
     --text-color:#000;
-    --main-color:#007f73;
+    --main-color:#4D4D4D;
 }
 html{
     font-size:62.5%;
@@ -24,7 +24,7 @@ body{
 }
 section{
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 3rem 6% 2rem;
 }
 
 /*  Header section code  */
@@ -165,47 +165,92 @@ span{
 }
 /* about section code css */
 
-.about{
-    display: flex;
-    align-items: top;
-    justify-content: center;
+.skills{
     gap:2rem;
     background: var(--snd-bg-color);
 }
-.about-img img{
-    width: 25vw;
-    border: 2px solid var(--main-color);
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease;
-}
-.about-img img:hover{
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 35px var(--main-color),
-                0 0 45px var(--main-color);
-}
+
 
 .heading{
     font-size: 6rem;
-    text-align: center;
 }
-.about-content{
+.skill-content{
     padding: 0 4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
-.about-content h2{
-    text-align : left;
-    line-height: 1.2;
+.skill-content h2{
+    text-align : center;
+    line-height: 2;
+    font-size: 10rem;
+    top: 0;
 }
 
-.about-content h3{
+.skill-content h3{
     font-size: 3rem;
 }
-.about-content p{
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+.categories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    grid-template-rows: auto; /* Creates 2 equal rows */
+    gap: 10px;
 }
+.languages,  .frontend, .database, .tools_and_libraries {
+    background: var(--bg-color);
+    padding-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 42px);
+    gap: 30px;
+}
+.backend{
+    background: var(--bg-color);
+    padding-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 42px);
+    gap: 30px;
+    /* align-items: center; */
+    text-align: center;
+    
+}
+.categories p{
+    max-width: 42px;
+    max-height: 10px;
+    text-align: center;
+}
+.categories i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.categories i:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color:var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px var(--main-color);
 
+}
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2, 42px);
+    gap: 80%;
+    text-align: center;
+}
+  
+  
 /* Experience section code css */
 
 .experience h2{
@@ -412,6 +457,12 @@ span{
     cursor: pointer;
 }
 
+.certificates .certificateContainer li{
+    text-align: left;
+    font-size: small;
+    justify-content: center;
+}
+
 
 /* contact section code css */
 
@@ -509,7 +560,7 @@ span{
         padding: 2rem 3%;
     }
     section{
-        padding:10rem 3%;
+        padding:3rem 3%;
     }
     .experience{
         padding: 7rem;
@@ -565,13 +616,10 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
-    .about{
+    .skills{
         flex-direction: column-reverse;
     }
-    .about-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
+    
     .experience h2{
         margin-bottom: 3rem;
     }
@@ -580,10 +628,6 @@ span{
     .home-img img{
         width: 70vw;
         margin-top: 8rem;
-    }
-    .about-img img{
-        width: 70vw;
-        margin-top: 4rem;
     }
     .experience-container .experience-box{
         min-height: 310px;
